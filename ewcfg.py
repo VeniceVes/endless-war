@@ -19344,6 +19344,23 @@ cosmetic_items_list = [
 		price = 50000,
 		vendors = [vendor_bazaar],
 	),
+    EwCosmeticItem(
+        id_cosmetic="visor",
+        str_name="visor",
+        str_desc="A high tech visor that seems to make it so you can't see shit, but it looks cool and seems to slightly improve your other senses.",
+        rarity=rarity_plebeian,
+        stats={
+            stat_attack: -1,
+            stat_defense: 2,
+			stat_speed: -1,
+        },
+        durability=base_durability,
+        style=style_smart,
+        freshness=8,
+        acquisition=acquisition_smelting,
+        price=60000,
+        vendors=[vendor_bazaar],
+    ),
 	EwCosmeticItem(
 		id_cosmetic = "heartboxers",
 		str_name = "heart boxers",
@@ -24213,7 +24230,7 @@ nobite_text = [
 		"AUUUUUGH JUST BITE THE FUCKING HOOK ALREADY...",
 		"You begin to zone-out a bit...",
 		"Shouldn't you be doing something productive?",
-	"You sit patiently, eagerly awaiting a fish to bite. Thanks to your concentration, this descriptive contradiction does not occur to you.",
+	    "You sit patiently, eagerly awaiting a fish to bite. Thanks to your concentration, this descriptive contradiction does not occur to you.",
 		"You begin to daydream about fish sex... Gross...",
 		"You begin to daydream about fish sex... Hot...",
 		"You see a fish about to bite your hook, but you shout in elation, scaring it away...",
@@ -24236,7 +24253,9 @@ nobite_text = [
 		"You see a bird carry off a Plebefish in the distance... Good riddance...",
 		"You spot a stray bullet in the distance...",
 		"You see a dead body float up to the surface of the Slime...",
-		"Fish..."
+		"Fish...",
+        "A rancid breeze hits you as you fish...",
+        "Maybe the real fishes were the friends we made along the way?"
 ]
 
 generic_help_response = "Check out the guide for help: https://ew.krakissi.net/guide/\nThe guide won't cover everything though, and may even be a bit outdated in some places, so you can also visit N.L.A.C.U. (!goto uni) or Neo Milwaukee State (!goto nms) to get more in-depth descriptions about how various game mechanics work by using the !help command there. Portable game guides can also be bought there for 10,000 slime."
@@ -25080,6 +25099,7 @@ curse_responses = [ # scold the player for swearing
 	"Calm down that attitude of yours, will you?",
 	"Your bad manners have costed you a fraction of your SlimeCoin!",
 	"Take your anger out on a juvenile, if you're so inclined to use such vulgar language.",
+    "Watch your profanity!",
 	#"You know, don't, say, s-swears."
 ]
 
