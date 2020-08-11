@@ -20019,7 +20019,7 @@ cosmetic_items_list = [
 		is_hat = True,
 	),
 	EwCosmeticItem(
-		id_cosmetic = "felinehat", # fuck you.
+		id_cosmetic = "felinehat", # fuck you .
 		str_name = "Feline Hat", # fuck you.
 		stats = {
 			stat_attack: -10, # fuck you.
@@ -20047,6 +20047,19 @@ cosmetic_items_list = [
 		acquisition = acquisition_smelting,
 		is_hat = True,
 	),
+    EwCosmeticItem(
+        id_cosmetic="surgicalmask",
+        str_name="surgical mask",
+        str_desc="A standardized surgical mask designed to keep germs out or in.",
+        rarity=rarity_plebeian,
+        stats={
+            stat_defense: 1,
+        },
+        durability=base_durability,
+        style=style_cool,
+        acquisition=acquisition_smelting,
+        is_hat=True,
+    ),
 ]
 
 
