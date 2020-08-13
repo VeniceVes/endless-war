@@ -20053,7 +20053,7 @@ cosmetic_items_list = [
         str_desc="A standardized surgical mask designed to keep germs out or in.",
         rarity=rarity_plebeian,
         stats={
-            stat_defense: 1,
+            stat_defense: 2,
         },
         durability=base_durability,
         style=style_cool,
