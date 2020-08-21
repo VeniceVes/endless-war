@@ -9198,6 +9198,14 @@ fish_list  =  [
 		catch_weather = fish_catchtime_rain,
 		str_desc = "Rejoice, horndogs.",
 	),
+    EwFish(
+        id_fish="sordfish",
+        str_name="Sordfish",
+        rarity=fish_rarity_rare,
+        catch_time=None,
+        catch_weather=fish_catchtime_rain,
+        str_desc="It's shitty JPEG nature emanates, and you feel your bank account grow a bit.",
+    ),
 ]
 
 # A map of id_fish to EwFish objects.

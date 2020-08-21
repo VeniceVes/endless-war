@@ -688,6 +688,10 @@ async def reel(cmd):
 				if fisher.current_fish == "plebefish":
 					slime_gain = ewcfg.fish_gain * .5
 					value = 10
+
+				elif fisher.current_fish == "sordfish":
+					slime_gain = 0
+					slimecoin_gain = 10
 					
 				controlling_faction = ewutils.get_subzone_controlling_faction(user_data.poi, user_data.id_server)
 
