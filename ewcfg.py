@@ -10773,7 +10773,9 @@ poi_list = [
 			"ck",
 			"cct",
 			"ckt",
-			"cathedral"
+			"cathedral",
+            "killercoptown"
+            "killercophouse"
 		],
 		str_name = "Cop Killtown",
 		str_desc = "Edifices of various sinister architectural styles rise above the pavement. Gothic cathedrals, Victorian buildings, and New England brownstone apartments all dyed cool, dark colors. This district even hosts a miniature Japantown, featuring stores and restaurants that clutter your vision with densely packed fluorescent signage and other visual noise. Often cloaked in shadow from the height of these imposing buildings, the narrow, cobblestone streets of this district are perfect to brood and foster your angst in.\nCop Killtown is the gang base of the hardboiled, and calculating Killers. St. Ben’s Cathedral looms menacing on the horizon.\nhttps://discord.gg/xSQQD2M\n\nThis area contains the Cop Killtown Subway Station. To the North is Astatine Heights. To the East is Smogsburg. To the Southeast is Downtown NLACakaNM. To the Northwest is Gatlingsdale.",
@@ -14521,6 +14523,7 @@ poi_list = [
 			"fcourt",
 			"fc",
 			"marketmanipulation"
+            "kbfc"
 		],
 		str_name = "The NLACakaNM Food Court",
 		str_desc = "Inside a large shopping mall lies the city’s prized food court. This large, brightly-lit area with tiled walls and floors and numerous clashing, "
@@ -19456,6 +19459,17 @@ cosmetic_items_list = [
 		acquisition = acquisition_smelting,
 		is_hat=True,
 	),
+    EwCosmeticItem(
+        id_cosmetic="pairofoldboots",
+        str_name="a Pair of Old Boots",
+        str_desc="A good old pair of wet boots that have have been out at sea for way too long.",
+        stats={
+            stat_speed: 1,
+        },
+        durability=base_durability,
+        style=style_tough,
+        acquisition=acquisition_smelting,
+    ),
 	EwCosmeticItem(
 		id_cosmetic = "braces",
 		str_name = "Braces",
@@ -20381,6 +20395,19 @@ smelting_recipe_list = [
 			item_id_ironingot:1
 		},
 		products = [item_id_tanningknife]
+    ),
+        EwSmeltingRecipe(
+        id_recipe="pairofoldboots",
+        str_name="a pair of old boots",
+        alias=[
+            "pairofboots",
+            "oldbootpair",
+            "oldboots"
+        ],
+        ingredients={
+            item_id_oldboot: 2,
+        },
+        products = ['pairofoldboots']
 	),
 		EwSmeltingRecipe(
 		id_recipe = "leather",
