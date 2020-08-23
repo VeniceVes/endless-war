@@ -546,6 +546,7 @@ async def cast(cmd):
 
 """ Reels in the fishing line.. """
 async def reel(cmd):
+	global gang_bonus
 	user_data = EwUser(member = cmd.message.author)
 	if user_data.life_state == ewcfg.life_state_shambler:
 		response = "You lack the higher brain functions required to {}.".format(cmd.tokens[0])
@@ -726,9 +727,12 @@ async def reel(cmd):
 						'value': value
 					}
 				)
-
-				response = "You reel in a {fish}! {flavor} You grab hold and wring {slime:,} slime from it. "\
-					.format(fish = ewcfg.fish_map[fisher.current_fish].str_name, flavor = ewcfg.fish_map[fisher.current_fish].str_desc, slime = slime_gain)
+						if slimecoin_gain == 0:
+							response = "You reel in a {fish}! {flavor} You grab hold and wring {slime:,} slime from it. "\
+								.format(fish = ewcfg.fish_map[fisher.current_fish].str_name, flavor = ewcfg.fish_map[fisher.current_fish].str_desc, slime = slime_gain)
+						else:
+							response = "You reel in a {fish}! {flavor} You grab hold and feel your wallet gain {slimecoin:,} slimecoin from it. "\
+									.format(fish = ewcfg.fish_map[fisher.current_fish].str_name, flavor = ewcfg.fish_map[fisher.current_fish].str_desc, slimecoin = slimecoin_gain)
 
 				if gang_bonus == True:
 					if user_data.faction == ewcfg.faction_rowdys:
